@@ -34,53 +34,15 @@
           <a class="phone-number" href="tel:+78005558628">+7 800 555 86 28</a>
         </li>
         <li class="navigation-user-item">
-          <a class="navigation-user-link" href="#">
-            <span class="visually-hidden">Поиск</span></a>
-          <div class="search-form-container">
-            <form action="https://echo.htmlacademy.ru" method="post">
-              <input id="search" type="search" name="search" placeholder="Поиск по сайту">
-              <input id="reset" type="reset" name="reset">
-            </form>
-          </div>
+          <a class="navigation-user-link" href="#search-popup">
+            <span class="visually-hidden">Поиск</span>
+          </a>
         </li>
         <li class="navigation-user-item">
           <a class="navigation-user-link" href="#enter-popup">Вход</a>
-          <div class="enter-popup" id="enter-popup">
-            <a class="enter-popup-area" href="#header"></a>
-            <div class="enter-popup-body">
-              <div class="enter-popup-content">
-                <span class="enter-popup-title">Личный кабинет</span>
-                <form class="enter-popup-text" action="https://echo.htmlacademy.ru" method="post">
-                  <div>
-                    <label class="visually-hidden" for="user-login">Логин</label>
-                    <input id="user-login" type="email" name="user-login" placeholder="email@example.com" required>
-                  </div>
-                  <div>
-                    <label class="visually-hidden" for="user-password">Пароль</label>
-                    <input id="user-password" type="password" name="user-password" placeholder="Пароль" required>
-                  </div>
-                  <div class="registration-help">
-                    <a href="#">Забыли пароль?</a>
-                    <a href="#">Регистрация</a>
-                  </div>
-                  <div>
-                    <button class="button" type="submit">Войти</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
         </li>
         <li class="navigation-user-item">
           <a class="navigation-user-link" href="#cart-popup">Пусто</a>
-          <div class="cart-popup" id="cart-popup">
-            <a class="cart-popup-area" href="#header"></a>
-            <div class="cart-popup-body">
-              <div class="cart-popup-content">
-                <span>Ваша корзина пока пуста</span>
-              </div>
-            </div>
-          </div>
         </li>
       </ul>
     </nav>
@@ -158,8 +120,7 @@
       </ul>
     </section>
     <section class="main-sale">
-      <h2 class="visually-hidden">Акции</h2>
-      <span>Заказывайте мороженое и получайте подарки!</span>
+      <h2>Заказывайте мороженое и получайте подарки!</h2>
       <article class="sale-item">
         <h3>Малинка даром!</h3>
         <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -172,44 +133,51 @@
       </article>
     </section>
     <section class="main-popular">
-      <h2 class="visually-hidden">Популярные вкусы мороженого</h2>
-      <span>Попробуйте самые популярные вкусы нашего мороженого</span>
+      <h2>Попробуйте самые популярные вкусы нашего мороженого</h2>
       <ul class="popular-list">
         <li class="popular-item">
-          <img src="" alt="Малиновое мороженое">
-          <h3>Малинка</h3>
+          <a href="#">
+           <img src="" alt="Малиновое мороженое">
+           <h3>Малинка</h3>
+          </a>
           <p>Сливочное мороженое с малиновым джемом</p>
-          <span class="popular-price">310 ₽/кг</span>
+          <p class="popular-price">310 ₽/кг</p>
           <a class="button" href="#"></a>
         </li>
         <li class="popular-item">
-          <img src="" alt="Фисташковое мороженое">
-          <h3>Фисташка</h3>
+          <a href="#">
+           <img src="" alt="Фисташковое мороженое">
+           <h3>Фисташка</h3>
+          </a>
           <p>Фисташковый пломбир с кусочками шоколада</p>
-          <span class="popular-price">340 ₽/кг</span>
+          <p class="popular-price">340 ₽/кг</p>
           <a class="button" href="#"></a>
         </li>
         <li class="popular-item">
-          <img src="" alt="Черничное мороженое">
-          <h3>Черника</h3>
+          <a href="#">
+           <img src="" alt="Черничное мороженое">
+           <h3>Черника</h3>
+          </a>
           <p>Крем-брюле<br>
             с черничным джемом</p>
-          <span class="popular-price">330 ₽/кг</span>
+          <p class="popular-price">330 ₽/кг</p>
           <a class="button" href="#"></a>
         </li>
         <li class="popular-item">
-          <img src="" alt="Мороженое бабл-гам">
-          <h3>Бабл-гам</h3>
+          <a href="#">
+           <img src="" alt="Мороженое бабл-гам">
+           <h3>Бабл-гам</h3>
+          </a>
           <p>Ванильный пломбир<br>
             со сладкой посыпкой</p>
-          <span class="popular-price">320 ₽/кг</span>
+          <p class="popular-price">320 ₽/кг</p>
           <a class="button" href="#"></a>
         </li>
       </ul>
     </section>
     <section class="main-features">
       <h2 class="visually-hidden">Преимущества магазина</h2>
-      <span>Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</span>
+      <p>Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</p>
       <ul class="features-list">
         <li class="feature-item">
           <p>Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и
@@ -233,8 +201,7 @@
     <section class="main-news">
       <h2 class="visually-hidden">Новости</h2>
       <article>
-        <h3 class="visually-hidden">Новости блога</h3>
-        <span>Новое в нашем блоге</span>
+        <h3>Новое в нашем блоге</h3>
         <a href="#">
           <p>10 способов сервировки фруктовых щербетов
             к столу</p>
@@ -259,7 +226,7 @@
     <section class="main-delivery">
       <h2 class="visually-hidden">Доставка</h2>
       <div>
-        <span>Доставка любимого мороженого на дом</span>
+        <h3>Доставка любимого мороженого на дом</h3>
         <p>Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на
           дом, и курьер привезёт вам ваш заказ в течение часа!</p>
       </div>
@@ -289,39 +256,13 @@
       <h2 class="visually-hidden">Обратная связь</h2>
       <div>
         <address class="contacts-address">
-          <span>Адрес главного офиса и офлайн-магазина:</span>
+          <p>Адрес главного офиса и офлайн-магазина:</p>
           <p class="contacts-address-text">наб. реки Карповки,<br> 5 лит П, Санкт-Петербург</p>
-          <span>Для заказов по телефону:</span><br>
+          <p>Для заказов по телефону:</p><br>
           <a class="contacts-number" href="tel:+78128121212">+7 (812) 812-12-12</a><br>
         </address>
-        <span>(с 10 до 20 ежедневно)</span>
+        <p>(с 10 до 20 ежедневно)</p>
         <a class="button" href="#feedback-popup">Форма обратной связи</a>
-      </div>
-      <div id="feedback-popup" class="feedback-popup">
-        <a class="feedback-popup-area" href="#header"></a>
-        <div class="feedback-popup-body">
-          <div class="feedback-popup-content">
-            <a class="feedback-popup-close" href="#"></a>
-            <span class="feedback-popup-title">Мы обязательно ответим вам!</span>
-            <form class="feedback-popup-text" action="https://echo.htmlacademy.ru" method="post">
-              <div>
-                <label class="visually-hidden" for="name-feedback">Имя и фамилия</label>
-                <input id="name-feedback" type="text" name="name-feedback" placeholder="Имя и фамилия" required>
-              </div>
-              <div>
-                <label class="visually-hidden" for="email-feedback">Электронная почта</label>
-                <input id="email-feedback" type="email" name="email-feedback" placeholder="email@example.com" required>
-              </div>
-              <div>
-                <label class="visually-hidden" for="review-feedback">Отзыв</label>
-                <textarea id="review-feedback" placeholder="В свободной форме" rows="5"></textarea>
-              </div>
-              <div>
-                <button class="button" type="submit">Отправить</button>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
     </section>
   </main>
@@ -370,6 +311,80 @@
       <p>Сделано в <a href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
     </section>
   </footer>
+  <!--Попап поиска-->
+  <div class="search-popup">
+    <a class="search-popup-area" href="#header"></a>
+    <div class="search-popup-body">
+      <div class="search-popup-content">
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <input id="search" type="search" name="search" placeholder="Поиск по сайту">
+      <input id="reset" type="reset" name="reset">
+    </form>
+      </div>
+    </div>
+  </div>
+  <!--Попап личного кабинета-->
+  <div class="enter-popup" id="enter-popup">
+    <a class="enter-popup-area" href="#header"></a>
+    <div class="enter-popup-body">
+      <div class="enter-popup-content">
+        <p class="enter-popup-title">Личный кабинет</p>
+        <form class="enter-popup-text" action="https://echo.htmlacademy.ru" method="post">
+          <div>
+            <label class="visually-hidden" for="user-login">Логин</label>
+            <input id="user-login" type="email" name="user-login" placeholder="email@example.com" required>
+          </div>
+          <div>
+            <label class="visually-hidden" for="user-password">Пароль</label>
+            <input id="user-password" type="password" name="user-password" placeholder="Пароль" required>
+          </div>
+          <div class="registration-help">
+            <a href="#">Забыли пароль?</a>
+            <a href="#">Регистрация</a>
+          </div>
+          <div>
+            <button class="button" type="submit">Войти</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--Попап пустой корзины-->
+  <div class="cart-popup" id="cart-popup">
+    <a class="cart-popup-area" href="#header"></a>
+    <div class="cart-popup-body">
+      <div class="cart-popup-content">
+        <p>Ваша корзина пока пуста</p>
+      </div>
+    </div>
+  </div>
+  <!--Попап обратной связи-->
+  <div id="feedback-popup" class="feedback-popup">
+    <a class="feedback-popup-area" href="#header"></a>
+    <div class="feedback-popup-body">
+      <div class="feedback-popup-content">
+        <a class="feedback-popup-close" href="#"></a>
+        <p class="feedback-popup-title">Мы обязательно ответим вам!</p>
+        <form class="feedback-popup-text" action="https://echo.htmlacademy.ru" method="post">
+          <div>
+            <label class="visually-hidden" for="name-feedback">Имя и фамилия</label>
+            <input id="name-feedback" type="text" name="name-feedback" placeholder="Имя и фамилия" required>
+          </div>
+          <div>
+            <label class="visually-hidden" for="email-feedback">Электронная почта</label>
+            <input id="email-feedback" type="email" name="email-feedback" placeholder="email@example.com" required>
+          </div>
+          <div>
+            <label class="visually-hidden" for="review-feedback">Отзыв</label>
+            <textarea id="review-feedback" placeholder="В свободной форме" rows="5"></textarea>
+          </div>
+          <div>
+            <button class="button" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
