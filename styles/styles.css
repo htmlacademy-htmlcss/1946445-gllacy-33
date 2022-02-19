@@ -346,10 +346,12 @@ margin-bottom: 80px;
 
 .product-list {
   width: 1170px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  column-gap: 30px;
+  row-gap: 91px;
   margin: 0;
+  margin-bottom: 16px;
   padding: 0;
   list-style-type: none;
   text-align: center;
@@ -374,8 +376,6 @@ margin-bottom: 80px;
 }
 
 .product-card {
-  width: 270px;
-  margin-bottom: 91px;
   background-color: #fcfcfc;
   border-radius: 8px;
 }
@@ -557,7 +557,6 @@ margin-bottom: 80px;
 .form-grey {
   box-sizing: border-box;
   width: 332px;
-  height: 48px;
   line-height: 20px;
   margin: 0;
   padding: 14px 16px;
@@ -622,6 +621,7 @@ margin-bottom: 80px;
 }
 
 .delivery-form-text {
+  width: 380px;
   margin: 0;
   margin-bottom: 32px;
   color: #565c66;
@@ -630,7 +630,7 @@ margin-bottom: 80px;
 .delivery-payment {
   box-sizing: border-box;
   width: 500px;
-  padding: 40px 40px 42px 40px;
+  padding: 40px 40px 54px 40px;
   background-color: #fcfcfc;
   border-radius: 8px;
 }
@@ -647,22 +647,22 @@ margin-bottom: 80px;
   ". button ."
 }
 
-.delivery-form-date {
-  display: block;
-  grid-area: data;
+.field-group {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+}
+
+.delivery-form-date {
+  grid-area: data;
 }
 
 .delivery-form-time {
-  display: block;
   grid-area: phone;
-  margin: 0;
 }
 
 .delivery-form-address {
-  display: block;
   grid-area: address;
-  margin: 0;
 }
 
 .button-delivery-submit {
@@ -670,6 +670,7 @@ margin-bottom: 80px;
 }
 
 .button-delivery {
+  margin-top: 12px;
   box-sizing: border-box;
   padding: 8px 0;
   display: inline-block;
