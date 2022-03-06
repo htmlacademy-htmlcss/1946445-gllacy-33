@@ -7,21 +7,24 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body>
+<body class="body-pink">
   <!--Шапка сайта-->
+  <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
   <header class="page-header" id="header">
     <nav class="navigation">
       <a class="navigation-logo" href="index.html"><img src="images/logo-gllacy.svg" width="137" height="56" alt="Логотип Глейси"></a>
       <ul class="navigation-list">
-        <li class="navigation-item">
+        <li class="navigation-item navigation-catalog">
           <a class="navigation-link catalog-link" href="catalog.html">Каталог</a>
+          <div class="catalog-submenu">
           <ul class="icecream-list">
-            <li><a class="icecream-type new visually-hidden" href="#">Новинки</a></li>
-            <li><a class="icecream-type visually-hidden" href="#">Сливочное</a></li>
-            <li><a class="icecream-type visually-hidden" href="#">Щербеты</a></li>
-            <li><a class="icecream-type visually-hidden" href="#">Фруктовый лёд</a></li>
-            <li><a class="icecream-type visually-hidden" href="#">Мелорин</a></li>
+            <li class="icecream-type"><a class="icecream-link" href="#">Новинки</a></li>
+            <li class="icecream-type"><a class="icecream-link" href="#">Сливочное</a></li>
+            <li class="icecream-type"><a class="icecream-link" href="#">Щербеты</a></li>
+            <li class="icecream-type"><a class="icecream-link" href="#">Фруктовый лед</a></li>
+            <li class="icecream-type"><a class="icecream-link" href="#">Мелорин</a></li>
           </ul>
+        </div>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#delivery-payment">Доставка и оплата</a>
@@ -38,9 +41,45 @@
           <a class="navigation-user-link navigation-search" href="#search-popup">
             <span class="visually-hidden">Поиск</span>
           </a>
+          <div class="search-popup search-popup-open">
+            <div class="search-popup-content">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <input class="search-input" id="search" type="search" name="search" placeholder="Поиск по сайту">
+            <span class="search-reset">
+              <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8858 2.0548a.6668.6668 0 0 0-.9428-.9428L6.9988 6.0562 2.0546 1.112a.6667.6667 0 0 0-.9428.9428L6.056 6.999l-4.9442 4.9442a.6666.6666 0 1 0 .9428.9428l4.9442-4.9442 4.9442 4.9442a.6667.6667 0 0 0 .9428-.9428L7.9416 6.999l4.9442-4.9442Z"/>
+              </svg>
+            </span>
+          </form>
+            </div>
+          </div>
         </li>
         <li class="navigation-user-item-enter">
           <a class="navigation-user-link navigation-enter" href="#enter-popup">Вход</a>
+          <div class="popup-container-enter popup-container-close">
+            <div class="popup-enter">
+              <section>
+                <h2 class="popup-enter-title">Личный кабинет</h2>
+                <form class="popup-enter-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p class="field-group-enter login-enter">
+                    <label class="visually-hidden" for="user-login">Логин</label>
+                    <input class="enter-form-field" id="user-login" type="email" name="user-login" placeholder="email@example.com" required>
+                  </p>
+                  <p class="field-group-enter password-enter">
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input class="enter-form-field" id="user-password" type="password" name="user-password" placeholder="Пароль" required>
+                  </p>
+                  <div class="popup-enter-special">
+                    <button class="button-pink popup-enter-button" type="submit">Войти</button>
+                    <p class="registration-help">
+                      <a class="enter-help-link" href="#">Забыли пароль?</a>
+                      <a class="enter-help-link" href="#">Регистрация</a>
+                    </p>
+                  </div>
+                </form>
+              </section>
+              </div>
+            </div>
         </li>
         <li class="navigation-user-item-cart">
           <a class="navigation-user-link navigation-cart" href="#cart-popup">
@@ -49,6 +88,11 @@
             </svg>
             Пусто
           </a>
+          <div class="cart-popup cart-popup-open">
+            <div class="cart-popup-content">
+              <p class="cart-popup-text">Ваша корзина пока пуста</p>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>
@@ -56,7 +100,6 @@
   <!--Содержимое сайта-->
   <main class="page-main main-container">
     <div class="page-container">
-      <h1 class="visually-hidden">Магазин мороженого Глейси</h1>
       <section class="slider-wrapper">
         <h2 class="visually-hidden">Варианты мороженого</h2>
         <div class="slider-body">
@@ -100,17 +143,23 @@
               </div>
             </li>
           </ul>
-            <ul class="pagination-slider">
-              <li class="pagination-slider-item pagination-slider-current">
-                <a class="pagination-slider-link"><span class="visually-hidden">Первый слайд с мороженым</span></a>
+            <ol class="pagination-slider">
+              <li class="pagination-slider-item">
+                <button class="pagination-slider-button pagination-slider-current" type="button">
+                  <span class="visually-hidden">Первый слайд с мороженым</span>
+                </button>
               </li>
               <li class="pagination-slider-item">
-                <a class="pagination-slider-link" href="#"><span class="visually-hidden">Второй слайд с мороженым</span></a>
+                <button class="pagination-slider-button" type="button">
+                  <span class="visually-hidden">Второй слайд с мороженым</span>
+                </button>
               </li>
               <li class="pagination-slider-item">
-                <a class="pagination-slider-link" href="#"><span class="visually-hidden">Третий слайд с мороженым</span></a>
+                <button class="pagination-slider-button" type="button">
+                  <span class="visually-hidden">Третий слайд с мороженым</span>
+                </button>
               </li>
-            </ul>
+            </ol>
             <div class="slider-buttons">
               <button class="slider-button slider-prev" type="button">
                 <svg aria-hidden="true" focusable="false" width="6" height="12" viewBox="0 0 6 12" xmlns="http://www.w3.org/2000/svg">
@@ -271,7 +320,7 @@
             Честно =)</p>
             <div class="subscription-email">
               <label class="visually-hidden" for="subscribe-email">Почта</label>
-              <input class="form-grey" id="subscribe-email" type="email" name="subscribe-email"
+              <input class="form-grey form-subscription" id="subscribe-email" type="email" name="subscribe-email"
                 placeholder="email@example.com" required>
             </div>
               <button class="button-pink button-subscribe" type="submit">Отправить</button>
@@ -290,7 +339,17 @@
           </p>
           <form class="delivery-form" action="https://echo.htmlacademy.ru" method="post">
             <p class="field-group delivery-form-date">
+              <span class="form-label">
               <label class="delivery-label delivery-date-label" for="delivery-date">Дата</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-date-label">
+                  <svg class="tooltip-icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.0003 2.125c-2.6926 0-4.8753 2.1828-4.8753 4.8753 0 2.6925 2.1827 4.8753 4.8753 4.8753 2.6925 0 4.8752-2.1828 4.8752-4.8753 0-2.6925-2.1827-4.8752-4.8752-4.8752ZM.7917 7.0004c0-3.4289 2.7797-6.2086 6.2086-6.2086 3.4289 0 6.2085 2.7797 6.2085 6.2086 0 3.4289-2.7796 6.2086-6.2085 6.2086-3.429 0-6.2086-2.7797-6.2086-6.2086ZM7 6.3334a.6667.6667 0 0 1 .6666.6667v2.2167a.6667.6667 0 0 1-1.3333 0V7.0001a.6667.6667 0 0 1 .6667-.6667Zm0-2.2168A.6667.6667 0 0 0 7 5.45h.0058a.6667.6667 0 0 0 0-1.3334h-.0058Z"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-date-label">Укажите желаемую дату и время доставки</span>
+              </span>
+            </span>
               <input class="form-grey form-date" id="delivery-date" type="text" name="delivery-date" placeholder="01.04.2020"
                 required>
             </p>
@@ -300,7 +359,17 @@
                 placeholder="+7 800 999-00-00" required>
             </p>
             <p class="field-group delivery-form-address">
+              <span class="form-label">
               <label class="delivery-label delivery-address-label" for="delivery-address">Адрес</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-address-label">
+                  <svg class="tooltip-icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.0003 2.125c-2.6926 0-4.8753 2.1828-4.8753 4.8753 0 2.6925 2.1827 4.8753 4.8753 4.8753 2.6925 0 4.8752-2.1828 4.8752-4.8753 0-2.6925-2.1827-4.8752-4.8752-4.8752ZM.7917 7.0004c0-3.4289 2.7797-6.2086 6.2086-6.2086 3.4289 0 6.2085 2.7797 6.2085 6.2086 0 3.4289-2.7796 6.2086-6.2085 6.2086-3.429 0-6.2086-2.7797-6.2086-6.2086ZM7 6.3334a.6667.6667 0 0 1 .6666.6667v2.2167a.6667.6667 0 0 1-1.3333 0V7.0001a.6667.6667 0 0 1 .6667-.6667Zm0-2.2168A.6667.6667 0 0 0 7 5.45h.0058a.6667.6667 0 0 0 0-1.3334h-.0058Z"/>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-address-label">Введите название улицы, дома и квартиры</span>
+              </span>
+            </span>
               <input class="form-grey form-address" id="delivery-address" type="text" name="delivery-address"
                 placeholder="ул. Большая Конюшенная, 19/8" required>
             </p>
@@ -372,80 +441,31 @@
       </section>
     </div>
   </footer>
-  <!--Попап поиска-->
-  <!--  <div class="search-popup">
-    <a class="search-popup-area" href="#header"></a>
-    <div class="search-popup-body">
-      <div class="search-popup-content">
-    <form action="https://echo.htmlacademy.ru" method="post">
-      <input id="search" type="search" name="search" placeholder="Поиск по сайту">
-      <input id="reset" type="reset" name="reset">
-    </form>
+  <div class="modal-container modal-container-feedback-close">
+    <div class="modal modal-feedback">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section>
+          <p class="modal-feedback-title">Мы обязательно ответим вам!</p>
+          <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="field-group">
+              <label class="visually-hidden" for="name-feedback">Имя и фамилия</label>
+              <input class="feedback-form-field" id="name-feedback" type="text" name="name-feedback" placeholder="Имя и фамилия" required>
+            </p>
+            <p class="field-group">
+              <label class="visually-hidden" for="email-feedback">Электронная почта</label>
+              <input class="feedback-form-field" id="email-feedback" type="email" name="email-feedback" placeholder="email@example.com" required>
+            </p>
+            <p class="field-group">
+              <label class="visually-hidden" for="review-feedback">Отзыв</label>
+              <textarea class="feedback-form-field" id="review-feedback" placeholder="В свободной форме" rows="6"></textarea>
+            </p>
+              <button class="button-pink feedback-form-button" type="submit">Отправить</button>
+          </form>
+        </section>
       </div>
     </div>
-  </div> -->
-  <!--Попап личного кабинета-->
-  <!-- <div class="enter-popup" id="enter-popup">
-    <a class="enter-popup-area" href="#header"></a>
-    <div class="enter-popup-body">
-      <div class="enter-popup-content">
-        <p class="enter-popup-title">Личный кабинет</p>
-        <form class="enter-popup-text" action="https://echo.htmlacademy.ru" method="post">
-          <div>
-            <label class="visually-hidden" for="user-login">Логин</label>
-            <input id="user-login" type="email" name="user-login" placeholder="email@example.com" required>
-          </div>
-          <div>
-            <label class="visually-hidden" for="user-password">Пароль</label>
-            <input id="user-password" type="password" name="user-password" placeholder="Пароль" required>
-          </div>
-          <div class="registration-help">
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Регистрация</a>
-          </div>
-          <div>
-            <button class="button" type="submit">Войти</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> -->
-  <!--Попап пустой корзины-->
-  <!-- <div class="cart-popup" id="cart-popup">
-    <a class="cart-popup-area" href="#header"></a>
-    <div class="cart-popup-body">
-      <div class="cart-popup-content">
-        <p>Ваша корзина пока пуста</p>
-      </div>
-    </div>
-  </div> -->
-  <!--Попап обратной связи-->
-  <!-- <div id="feedback-popup" class="feedback-popup">
-    <a class="feedback-popup-area" href="#header"></a>
-    <div class="feedback-popup-body">
-      <div class="feedback-popup-content">
-        <a class="feedback-popup-close" href="#"></a>
-        <p class="feedback-popup-title">Мы обязательно ответим вам!</p>
-        <form class="feedback-popup-text" action="https://echo.htmlacademy.ru" method="post">
-          <div>
-            <label class="visually-hidden" for="name-feedback">Имя и фамилия</label>
-            <input id="name-feedback" type="text" name="name-feedback" placeholder="Имя и фамилия" required>
-          </div>
-          <div>
-            <label class="visually-hidden" for="email-feedback">Электронная почта</label>
-            <input id="email-feedback" type="email" name="email-feedback" placeholder="email@example.com" required>
-          </div>
-          <div>
-            <label class="visually-hidden" for="review-feedback">Отзыв</label>
-            <textarea id="review-feedback" placeholder="В свободной форме" rows="5"></textarea>
-          </div>
-          <div>
-            <button class="button" type="submit">Отправить</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> -->
 </body>
 
 </html>

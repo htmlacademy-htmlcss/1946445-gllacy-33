@@ -7,21 +7,23 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-<body>
+<body class="body-pink">
   <!--Шапка сайта-->
   <header class="page-header" id="header">
     <nav class="navigation">
       <a class="navigation-logo" href="index.html"><img src="images/logo-gllacy.svg" width="137" height="56" alt="Логотип Глейси"></a>
       <ul class="navigation-list">
-        <li class="navigation-item">
+        <li class="navigation-item navigation-catalog">
           <a class="navigation-link catalog-link navigation-link-current" href="catalog.html">Каталог</a>
-          <ul class="icecream-list">
-            <li><a class="icecream-type new visually-hidden" href="#">Новинки</a></li>
-            <li><a class="icecream-type visually-hidden" href="#">Сливочное</a></li>
-            <li><a class="icecream-type visually-hidden" href="#">Щербеты</a></li>
-            <li><a class="icecream-type visually-hidden" href="#">Фруктовый лёд</a></li>
-            <li><a class="icecream-type visually-hidden" href="#">Мелорин</a></li>
-          </ul>
+          <div class="catalog-submenu">
+            <ul class="icecream-list">
+              <li class="icecream-type"><a class="icecream-link" href="#">Новинки</a></li>
+              <li class="icecream-type"><a class="icecream-link" href="#">Сливочное</a></li>
+              <li class="icecream-type"><a class="icecream-link" href="#">Щербеты</a></li>
+              <li class="icecream-type"><a class="icecream-link" href="#">Фруктовый лед</a></li>
+              <li class="icecream-type"><a class="icecream-link" href="#">Мелорин</a></li>
+            </ul>
+          </div>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#delivery-payment">Доставка и оплата</a>
@@ -38,9 +40,45 @@
           <a class="navigation-user-link navigation-search" href="#search-popup">
             <span class="visually-hidden">Поиск</span>
           </a>
+          <div class="search-popup search-popup-open">
+            <div class="search-popup-content">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <input class="search-input" id="search" type="search" name="search" placeholder="Поиск по сайту">
+            <span class="search-reset">
+              <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8858 2.0548a.6668.6668 0 0 0-.9428-.9428L6.9988 6.0562 2.0546 1.112a.6667.6667 0 0 0-.9428.9428L6.056 6.999l-4.9442 4.9442a.6666.6666 0 1 0 .9428.9428l4.9442-4.9442 4.9442 4.9442a.6667.6667 0 0 0 .9428-.9428L7.9416 6.999l4.9442-4.9442Z"/>
+              </svg>
+            </span>
+          </form>
+            </div>
+          </div>
         </li>
         <li class="navigation-user-item-enter">
           <a class="navigation-user-link navigation-enter" href="#enter-popup">Вход</a>
+          <div class="popup-container-enter popup-container-open">
+            <div class="popup-enter">
+              <section>
+                <h2 class="popup-enter-title">Личный кабинет</h2>
+                <form class="popup-enter-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p class="field-group-enter login-enter">
+                    <label class="visually-hidden" for="user-login">Логин</label>
+                    <input class="enter-form-field" id="user-login" type="email" name="user-login" placeholder="email@example.com" required>
+                  </p>
+                  <p class="field-group-enter password-enter">
+                    <label class="visually-hidden" for="user-password">Пароль</label>
+                    <input class="enter-form-field" id="user-password" type="password" name="user-password" placeholder="Пароль" required>
+                  </p>
+                  <div class="popup-enter-special">
+                    <button class="button-pink popup-enter-button" type="submit">Войти</button>
+                    <p class="registration-help">
+                      <a class="enter-help-link" href="#">Забыли пароль?</a>
+                      <a class="enter-help-link" href="#">Регистрация</a>
+                    </p>
+                  </div>
+                </form>
+              </section>
+              </div>
+            </div>
         </li>
         <li class="navigation-user-item-cart">
           <a class="navigation-user-link navigation-cart" href="#cart-popup">
@@ -49,6 +87,29 @@
             </svg>
             2 товара
           </a>
+          <div class="cart-full-popup cart-full-popup-open">
+            <div class="cart-full-popup-content">
+              <h2 class="cart-full-popup-title">Корзина</h2>
+              <div>
+                <ul class="cart-product-list">
+                  <li class="cart-product cart-raspberry">
+                    <h3 class="cart-product-title">Малинка</h3>
+                    <p class="cart-product-price">1 кг х 310 ₽</p>
+                    <p class="cart-total-sum">310 ₽</p>
+                  </li>
+                  <li class="cart-product cart-bubblegum">
+                    <h3 class="cart-product-title">Бабл-гам</h3>
+                    <p class="cart-product-price">1,5 кг х 320 ₽</p>
+                    <p class="cart-total-sum">480 ₽</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="cart-checkout">
+                <button class="button-pink button-checkout" type="submit">Оформить заказ</button>
+                <p class="cart-total-price">Итого: 790 ₽</p>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>
@@ -455,69 +516,6 @@
       </section>
     </div>
   </footer>
-  <!--Попап поиска-->
-  <!-- <div class="search-popup">
-    <a class="search-popup-area" href="#header"></a>
-    <div class="search-popup-body">
-      <div class="search-popup-content">
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <input id="search" type="search" name="search" placeholder="Поиск по сайту">
-          <input id="reset" type="reset" name="reset">
-        </form>
-      </div>
-    </div>
-  </div> -->
-  <!--Попап личного кабинета-->
-  <!-- <div class="enter-popup" id="enter-popup">
-    <a class="enter-popup-area" href="#header"></a>
-    <div class="enter-popup-body">
-      <div class="enter-popup-content">
-        <p class="enter-popup-title">Личный кабинет</p>
-        <form class="enter-popup-text" action="https://echo.htmlacademy.ru" method="post">
-          <div>
-            <label class="visually-hidden" for="user-login">Логин</label>
-            <input id="user-login" type="email" name="user-login" placeholder="email@example.com" required>
-          </div>
-          <div>
-            <label class="visually-hidden" for="user-password">Пароль</label>
-            <input id="user-password" type="password" name="user-password" placeholder="Пароль" required>
-          </div>
-          <div class="registration-help">
-            <a href="#">Забыли пароль?</a>
-            <a href="#">Регистрация</a>
-          </div>
-          <div>
-            <button class="button" type="submit">Войти</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> -->
-  <!--Попап полной корзины-->
-  <!--  <div class="cart-popup-full" id="cart-popup-full">
-    <a class="cart-popup-full-area" href="#header"></a>
-    <div class="cart-popup-full-body">
-      <div class="cart-popup-full-content">
-        <p class="cart-popup-title">Корзина</p>
-        <ul>
-          <li>
-            <p>Малинка</p>
-            <p>1 кг х 310 ₽</p>
-            <b>310 ₽</b>
-            <button class="delete-cart">X</button>
-          </li>
-          <li>
-            <p>Бабл-гам</p>
-            <p>1,5 кг х 320 ₽</p>
-            <b>480 ₽</b>
-            <button class="delete-cart">X</button>
-          </li>
-        </ul>
-        <a class="button" href="#">Оформить заказ</a>
-        <p>Итого: 790 ₽</p>
-      </div>
-    </div>
-  </div> -->
 </body>
 
 </html>
