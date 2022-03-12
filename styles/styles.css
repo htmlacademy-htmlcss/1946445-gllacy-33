@@ -491,11 +491,13 @@ body {
   border-radius: 26px;
   outline: 4px solid rgba(252, 252, 252, 0.4);
   background-color: #fcfcfc;
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .button-white:hover {
   outline: 4px solid #fcfcfc;
   background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 0px 4px 15px rgba(133, 133, 133, 0.15);
 }
 
 .button-white:focus,
@@ -508,6 +510,7 @@ body {
   color: #b9b9b9;
   outline: 4px solid rgba(252, 252, 252, 0.4);
   background-color: #e7e7e7;
+  box-shadow: none;
 }
 
 .button-order {
@@ -1191,12 +1194,14 @@ body {
   border-radius: 26px;
   outline: 4px solid rgba(254, 175, 195, 0.9);
   background-color: #ff2f64;
+  box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .button-pink:hover {
   color: #2d3440;
   outline: 4px solid #ff2f64;
   background-color: #fcfcfc;
+  box-shadow: none;
 }
 
 .button-pink:focus,
@@ -1210,6 +1215,7 @@ body {
   color: #565c66;
   outline: 4px solid rgba(185, 185, 185, 0.3);
   background-color: #b9b9b9;
+  box-shadow: none;
 }
 
 .button-subscribe {
@@ -2365,6 +2371,7 @@ body {
   right: 429px;
 
   display: flex;
+  filter: drop-shadow(0px 15px 40px rgba(45, 52, 64, 0.12));
 }
 
 @-moz-document url-prefix() {
