@@ -1469,7 +1469,7 @@ body {
 
   box-sizing: border-box;
   width: 250px;
-  height: 46;
+  min-height: 46px;
   margin-top: 33px;
   padding: 11px 0 0 0;
 }
